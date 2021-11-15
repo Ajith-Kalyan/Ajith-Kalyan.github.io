@@ -6,14 +6,24 @@
   <body style="margin : 0px; overflow: hidden;">
     <a-scene embedded arjs>
       <a-marker preset="hiro">
+
+        <a-assets>
+            <video id="Video_Asset_0" autoplay="true" loop crossorigin="anonymous" src="videos/package1.mp4"
+                webkit-playsinline playsinline controls muted>
+            </video>
+
+            <video id="Video_Asset_1" autoplay="true" loop crossorigin="anonymous" src="videos/Oculus.mp4" webkit-playsinline playsinline controls muted>
+            </video>
+        </a-assets>
+
         <!-- <a-entity
           position="0 0 0"
           scale="0.05 0.05 0.05"
           gltf-model="https://arjs-cors-proxy.herokuapp.com/https://raw.githack.com/AR-js-org/AR.js/master/aframe/examples/image-tracking/nft/trex/scene.gltf"
         ></a-entity> -->
 
-        <a-video src="https://www.youtube.com/watch?v=ZYZYnY-uu10&t=211s" autoplay="true" id="Video_0" class="intersectable" width="1.4" height="1"
-        position="0 0 0" webkit-playsinline playsinline controls loop rotation="270 0 0" color="#FFFFFF" transparent=False>
+        <a-video src="#Video_Asset_0" id="Video_0" class="intersectable" width="1.4" height="1"
+        position="0 0 0" rotation="270 0 0" color="#FFFFFF" transparent=False>
     </a-video>
 
       </a-marker>
