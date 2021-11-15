@@ -6,11 +6,16 @@
   <body style="margin : 0px; overflow: hidden;">
     <a-scene embedded arjs>
       <a-marker preset="hiro">
-        <a-entity
+        <!-- <a-entity
           position="0 0 0"
           scale="0.05 0.05 0.05"
           gltf-model="https://arjs-cors-proxy.herokuapp.com/https://raw.githack.com/AR-js-org/AR.js/master/aframe/examples/image-tracking/nft/trex/scene.gltf"
-        ></a-entity>
+        ></a-entity> -->
+
+        <a-video src="videos/Oculus.mp4" id="Video_0" class="intersectable" width="1.4" height="1"
+        position="0 0 0" rotation="270 0 0" color="#FFFFFF" transparent=False>
+    </a-video>
+
       </a-marker>
       <a-entity camera></a-entity>
     </a-scene>
