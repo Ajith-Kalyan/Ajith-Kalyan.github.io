@@ -145,6 +145,18 @@
 
             <video id="Video_Asset_1" autoplay="true" loop crossorigin="anonymous" src="videos/Oculus.mp4" webkit-playsinline playsinline controls muted>
             </video>
+
+            <a-asset-item
+                id="package-obj"
+                src="https://raw.githubusercontent.com/Ajith-Kalyan/Ajith-Kalyan.github.io/master/step1_obj.obj"
+                >
+            </a-asset-item>
+            <a-asset-item
+                id="package-mtl"
+                src="https://github.com/Ajith-Kalyan/Ajith-Kalyan.github.io/blob/master/step1_obj.mtl"
+                >
+            </a-asset-item>
+
         </a-assets>
         <!-- END: Unity Compiled Assets -->
 
@@ -154,28 +166,22 @@
             <!-- END: Add Image Target (marker) -->
 
             <!-- BEGIN: Unity Compiled Objects -->
-            <a-video src="#Video_Asset_0" id="Video_0" class="intersectable" width="1.4" height="1"
+            <!-- <a-video src="#Video_Asset_0" id="Video_0" class="intersectable" width="1.4" height="1"
                 position="0 0 0" rotation="270 0 0" color="#FFFFFF" transparent=False>
-            </a-video>
+            </a-video> -->
+
+            <a-obj-model
+                src="#package-obj"
+                mtl="#package-mtl"
+                scale="2 2 2"
+                rotation="-90 -90 0"
+                position="0 1.6 -2"
+                >
+            </a-obj-model>
             <!-- END: Unity Compiled Objects -->
 
             <!-- BEGIN: Bottom HTML -->
         </a-marker>
-
-        
-        <!-- BEGIN: Add Image Target (marker) -->
-        <a-marker id="marker1" preset="kanji" emitevents="true" button>
-            <!-- END: Add Image Target (marker) -->
-
-            <!-- BEGIN: Unity Compiled Objects -->
-            <a-video src="#Video_Asset_1" id="Video_1" class="intersectable" width="1.4" height="1"
-                 position="0 0.52 -5.3721E-08" rotation="270 0 0" color="#FFFFFF" transparent=False>
-            </a-video>
-            <!-- END: Unity Compiled Objects -->
-
-            <!-- BEGIN: Bottom HTML -->
-        </a-marker>
-
         <a-entity camera></a-entity>
     </a-scene>
 </body>
